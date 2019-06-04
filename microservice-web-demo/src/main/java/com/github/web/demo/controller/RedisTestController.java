@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("redis")
 public class RedisTestController {
 
-	@Reference(version = "${service.redis.version.v1}")
+	@Reference(version = "${redis.service.version.v1}")
 	private RedisService redisService;
 
 	@GetMapping("set")

@@ -15,12 +15,6 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<artifactId>microservice-redis</artifactId>
-	<dependencies>
-		<dependency>
-			<groupId>com.github</groupId>
-			<artifactId>microservice-dubbo-common</artifactId>
-			<version>${project.parent.version}</version>
-		</dependency>
-	</dependencies>
+
 
 </project>

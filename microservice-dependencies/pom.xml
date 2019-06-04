@@ -12,14 +12,5 @@
 
 
 	<artifactId>microservice-dependencies</artifactId>
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>com.github</groupId>
-				<artifactId>microservice-dubbo-common</artifactId>
-				<version>${project.parent.version}</version>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
 
 </project>

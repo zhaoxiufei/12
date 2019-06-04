@@ -1,4 +1,4 @@
-package com.github.microservice.redis.provider;
+package com.github.microservice.redis;
 
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

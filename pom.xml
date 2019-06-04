@@ -53,8 +53,8 @@
 	</properties>
 	<modules>
 		<module>microservice-dependencies</module>
+		<module>microservice-dubbo-dependencies</module>
 		<module>microservice-common</module>
-		<module>microservice-dubbo-common</module>
 		<module>microservice-redis</module>
 		<module>microservice-mongo</module>
 		<module>microservice-web-demo</module>
@@ -86,20 +86,6 @@
 				<groupId>org.apache.dubbo</groupId>
 				<artifactId>dubbo</artifactId>
 				<version>${apache.dubbo.version}</version>
-				<exclusions>
-					<exclusion>
-						<groupId>org.springframework</groupId>
-						<artifactId>spring</artifactId>
-					</exclusion>
-					<exclusion>
-						<groupId>javax.servlet</groupId>
-						<artifactId>servlet-api</artifactId>
-					</exclusion>
-					<exclusion>
-						<groupId>log4j</groupId>
-						<artifactId>log4j</artifactId>
-					</exclusion>
-				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.dubbo</groupId>
@@ -115,29 +101,12 @@
 				<groupId>org.apache.curator</groupId>
 				<artifactId>curator-recipes</artifactId>
 				<version>${curator-recipes.version}</version>
+
 			</dependency>
 			<dependency>
 				<groupId>org.apache.zookeeper</groupId>
 				<artifactId>zookeeper</artifactId>
 				<version>${zookeeper.version}</version>
-				<exclusions>
-					<exclusion>
-						<artifactId>netty</artifactId>
-						<groupId>io.netty</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>log4j</artifactId>
-						<groupId>log4j</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>slf4j-api</artifactId>
-						<groupId>org.slf4j</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>slf4j-log4j12</artifactId>
-						<groupId>org.slf4j</groupId>
-					</exclusion>
-				</exclusions>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
