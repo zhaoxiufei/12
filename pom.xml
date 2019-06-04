@@ -20,6 +20,7 @@
 		<platform-bom.version>Cairo-SR7</platform-bom.version>
 		<apache.dubbo.version>2.7.1</apache.dubbo.version>
 		<dubbo-spring-boot-starter.version>${apache.dubbo.version}</dubbo-spring-boot-starter.version>
+		<kryo.version>4.0.2</kryo.version>
 		<kryo-serializers.version>0.45</kryo-serializers.version>
 		<curator-recipes.version>4.2.0</curator-recipes.version>
 		<zookeeper.version>3.4.14</zookeeper.version>
@@ -93,6 +94,11 @@
 				<version>${dubbo-spring-boot-starter.version}</version>
 			</dependency>
 			<dependency>
+				<groupId>com.esotericsoftware</groupId>
+				<artifactId>kryo</artifactId>
+				<version>${kryo.version}</version>
+			</dependency>
+			<dependency>
 				<groupId>de.javakaffee</groupId>
 				<artifactId>kryo-serializers</artifactId>
 				<version>${kryo-serializers.version}</version>
@@ -101,7 +107,6 @@
 				<groupId>org.apache.curator</groupId>
 				<artifactId>curator-recipes</artifactId>
 				<version>${curator-recipes.version}</version>
-
 			</dependency>
 			<dependency>
 				<groupId>org.apache.zookeeper</groupId>
