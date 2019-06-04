@@ -16,4 +16,7 @@ dubbo:
     address: zookeeper://172.19.4.81:2181
     simplified: true
     file: ${user.home}/.dubbo/${spring.application.name}.cache
-
+  config-center:
+    address: zookeeper://172.19.4.81:2181
+  metadata-report:
+    address: zookeeper://172.19.4.81:2181

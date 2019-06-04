@@ -13,10 +13,6 @@ spring:
         max-active: 8
         min-idle: 0
 dubbo:
-  application:
-    id: ${spring.application.name}
-    owner:
-      - zhaoxiufei@gmail.com
   scan:
     basePackages: com.github.microservice.redis.provider
   protocol:
