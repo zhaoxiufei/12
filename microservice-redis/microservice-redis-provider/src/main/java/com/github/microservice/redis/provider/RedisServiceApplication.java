@@ -1,8 +1,8 @@
 package com.github.microservice.redis.provider;
 
-import org.apache.dubbo.container.Main;
-import org.springframework.boot.SpringApplication;
+import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 
 /**
  * @author <a href="mailto:zhaoxiufei@gmail.com">赵秀非</a>
@@ -11,7 +11,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class RedisServiceApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(RedisServiceApplication.class, args);
-		Main.main(args);
+		new SpringApplicationBuilder(RedisServiceApplication.class)
+			.web(WebApplicationType.NONE)
+			.run(args);
 	}
 }
