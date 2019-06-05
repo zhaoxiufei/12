@@ -20,11 +20,10 @@ dubbo:
     port: 20880
     serialization: kryo
   provider:
-    timeout: 20000
-    threads: 4
-    executes: 10000
+    timeout: 50000
+    threads: 500
   consumer:
-    timeout: 20000
+    timeout: 50000
     retries: 0
   registry:
     address: zookeeper://172.19.4.81:2181

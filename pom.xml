@@ -60,6 +60,7 @@
         <module>microservice-redis</module>
         <module>microservice-mongo</module>
         <module>microservice-web-demo</module>
+        <module>microservice-mq</module>
     </modules>
     <dependencyManagement>
         <dependencies>
