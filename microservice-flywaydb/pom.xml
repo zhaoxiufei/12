@@ -9,17 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>microservice-mq</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>microservice-mq-api</module>
-        <module>microservice-mq-provider</module>
-    </modules>
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-amqp</artifactId>
-        </dependency>
-    </dependencies>
+    <artifactId>microservice-flywaydb</artifactId>
+
 
 </project>
