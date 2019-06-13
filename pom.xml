@@ -61,8 +61,33 @@
         <module>microservice-mongo</module>
         <module>microservice-web-demo</module>
         <module>microservice-mq</module>
-        <module>microservice-flywaydb</module>
+        <module>microservice-xxl-job</module>
     </modules>
+    <profiles>
+        <profile>
+            <id>xxljob</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.flywaydb</groupId>
+                        <artifactId>flyway-maven-plugin</artifactId>
+                        <version>5.2.4</version>
+                        <dependencies>
+                            <dependency>
+                                <groupId>mysql</groupId>
+                                <artifactId>mysql-connector-java</artifactId>
+                                <version>8.0.11</version>
+                            </dependency>
+                        </dependencies>
+                        <configuration>
+                            <configFile>scripts/db/migration/flyway-xxljobdb.properties</configFile>
+                        </configuration>
+                        <inherited>false</inherited>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
     <dependencyManagement>
         <dependencies>
             <dependency>
