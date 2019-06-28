@@ -1,4 +1,4 @@
-package com.github.sharding.jdbc;
+package com.github.microservice.shardingjdbc.masterslave;
 
 import org.apache.shardingsphere.api.hint.HintManager;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,16 +8,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.util.Random;
-import java.util.stream.IntStream;
 
 /**
  * @author <a href="mailto:zhaoxiufei@gmail.com">赵秀非</a>
  * @since 2019-06-27 10:09
  */
 @SpringBootApplication
-public class ShardingApplication implements CommandLineRunner {
+public class ShardingJdbcMasterSlaveApplication implements CommandLineRunner {
     public static void main(String[] args) {
-        SpringApplication.run(ShardingApplication.class, args);
+        SpringApplication.run(ShardingJdbcMasterSlaveApplication.class, args);
     }
 
     @Autowired

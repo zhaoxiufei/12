@@ -64,7 +64,7 @@
         <module>microservice-web-demo</module>
         <module>microservice-mq</module>
         <module>microservice-xxl-job</module>
-        <module>microservice-sharding-jdbc</module>
+        <module>microservice-shardingjdbc</module>
         <module>microservice-log</module>
     </modules>
     <profiles>
