@@ -50,7 +50,7 @@ public class RedisServiceImpl implements RedisService {
 
     @Override
     public Boolean lock(String lockKey, String uuid, long seconds) {
-        log.info("{},{}", lockKey, uuid);
+        logger.info("{},{}", lockKey, uuid);
         return objectRedisTemplate.opsForValue().setIfAbsent(lockKey, uuid, Duration.ofSeconds(seconds));
     }
 

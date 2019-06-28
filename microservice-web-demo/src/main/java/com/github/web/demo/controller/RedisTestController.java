@@ -70,7 +70,7 @@ public class RedisTestController {
             String shangpingKey = "computer_key";
             if (redisService.lock(shangpingKey, b, 3)) {
                 //用户b拿到锁
-                log.info("用户{}拿到锁...", b);
+                logger.info("用户{}拿到锁...", b);
                 try {
                     //商品是否剩余
                     if (num <= 0) {
@@ -85,16 +85,16 @@ public class RedisTestController {
                     //抢购成功，商品递减，记录用户
                     num -= 1;
                     //抢单成功跳出
-                    log.info("用户{}抢单成功跳出...所剩库存：{}", b, num);
+                    logger.info("用户{}抢单成功跳出...所剩库存：{}", b, num);
                     return b + "抢单成功，所剩库存：" + num;
                 } finally {
-                    log.info("用户{}释放锁...", b);
+                    logger.info("用户{}释放锁...", b);
                     redisService.unlock(shangpingKey, b);
                 }
             } else {
                 //用户b没拿到锁，在超时范围内继续请求锁，不需要处理
                 if (b.equals("神牛-50") || b.equals("神牛-69")) {
-                    log.info("用户{}等待获取锁...", b);
+                    logger.info("用户{}等待获取锁...", b);
                 }
             }
         }
