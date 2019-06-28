@@ -7,7 +7,7 @@ spring:
     name: microservice-redis-provider
   # redis配置
   redis:
-    host: 172.19.4.81
+    host: 127.0.0.1
     lettuce:
       pool:
         max-active: 8
@@ -26,10 +26,10 @@ dubbo:
     timeout: 50000
     retries: 0
   registry:
-    address: zookeeper://172.19.4.81:2181
+    address: zookeeper://127.0.0.1:2181
     simplified: true
     file: ${user.home}/.dubbo/${spring.application.name}.cache
   config-center:
-    address: zookeeper://172.19.4.81:2181
+    address: zookeeper://127.0.0.1:2181
   metadata-report:
-    address: zookeeper://172.19.4.81:2181
+    address: zookeeper://127.0.0.1:2181

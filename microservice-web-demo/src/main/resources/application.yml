@@ -11,6 +11,6 @@ spring:
 
 dubbo:
   registry:
-    address: zookeeper://172.19.4.81:2181
+    address: zookeeper://127.0.0.1:2181
     simplified: true
     file: ${user.home}/.dubbo/${spring.application.name}.cache
