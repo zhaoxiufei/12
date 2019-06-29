@@ -66,6 +66,7 @@
         <module>microservice-xxl-job</module>
         <module>microservice-shardingjdbc</module>
         <module>microservice-log</module>
+        <module>microservice-transactional</module>
     </modules>
     <profiles>
         <profile>
@@ -152,6 +153,16 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
+    </dependencies>
 
 
     <build>
