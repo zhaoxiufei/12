@@ -7,15 +7,15 @@ spring:
       master:
         type: com.alibaba.druid.pool.DruidDataSource
         driver-class-name: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://127.0.0.1:3306/trwl?characterEncoding=UTF-8&allowMultiQueries=true
-        username: trwl
-        password: trwltrwl
+        url: jdbc:mysql://127.0.0.1:3306/test?characterEncoding=utf-8&allowMultiQueries=true
+        username: root
+        password: 123456
       slave0:
         type: com.alibaba.druid.pool.DruidDataSource
         driver-class-name: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://127.0.0.1:3306/trwl?characterEncoding=UTF-8&allowMultiQueries=true
-        username: trwl
-        password: trwltrwl
+        url: jdbc:mysql://127.0.0.1:3306/test?characterEncoding=utf-8&allowMultiQueries=true
+        username: root
+        password: 123456
     masterslave:
       # ROUND_ROBIN，RANDOM
       load-balance-algorithm-type: random
@@ -25,3 +25,16 @@ spring:
     props:
       sql:
         show: true
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    #    5.5以后不需要配置啦
+    database-platform: org.hibernate.dialect.MySQL57Dialect
+    open-in-view: false
+
+logging:
+  level:
+    org.springframework.orm: debug
+    org.springframework.transaction: debug
+#    org.hibernate: debug
