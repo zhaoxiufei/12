@@ -25,28 +25,44 @@ public class UserService {
     @Transactional(rollbackFor = Exception.class)
     public void save() {
         //会被回滚
-        userDao.save(new User().setName("张三").setPassword("123456"));
-        //会被回滚
-        save2();
+        saveDB("张三");
         //不会被回滚
         ((UserService) (AopContext.currentProxy())).save2();
         //noinspection NumericOverflow,divzero,unused
         int iii = 1 / 0;
     }
 
+    private void saveDB(String name) {
+        userDao.save(new User().setName(name).setPassword("123456"));
+    }
+
     @Transactional(rollbackFor = Exception.class, propagation = Propagation.REQUIRES_NEW)
     public void save2() {
-        userDao.save(new User().setName("李四").setPassword("123456"));
+        saveDB("李四");
     }
 
     @Transactional(rollbackFor = Exception.class, propagation = Propagation.REQUIRES_NEW)
     public void save3() {
-        roleService.save();//回滚
-        //不会回滚
+        //回滚
+        roleService.save();
+        //不会回滚，注解生效
         ((UserService) (AopContext.currentProxy())).save2();
         //noinspection NumericOverflow,divzero,unused
         int iii = 1 / 0;
     }
 
 
+    public void save4() {
+        //不会被回滚,事务不生效，本类互相调用，注解不生效
+        save2();
+        //noinspection NumericOverflow,divzero,unused
+        int iii = 1 / 0;
+    }
+
+    public void save5() {
+        //不会被回滚，注解生效
+        ((UserService) (AopContext.currentProxy())).save2();
+        //noinspection NumericOverflow,divzero,unused
+        int iii = 1 / 0;
+    }
 }

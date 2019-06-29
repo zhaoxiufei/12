@@ -30,4 +30,16 @@ public class TestController {
         userService.save3();
         return "ok";
     }
+
+    @GetMapping("t3")
+    public String t3() {
+        userService.save4();
+        return "ok";
+    }
+
+    @GetMapping("t4")
+    public String t4() {
+        userService.save5();
+        return "ok";
+    }
 }
