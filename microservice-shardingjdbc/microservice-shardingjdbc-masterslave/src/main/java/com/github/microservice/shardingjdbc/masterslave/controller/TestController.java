@@ -20,21 +20,7 @@ public class TestController {
     public String t1() {
         userService.save();
         userService.find();
-        return "ok";
-    }
-
-    @GetMapping("t2")
-    public String t2() {
-        return "ok";
-    }
-
-    @GetMapping("t3")
-    public String t3() {
-        return "ok";
-    }
-
-    @GetMapping("t4")
-    public String t4() {
+        userService.findMaster();
         return "ok";
     }
 }
