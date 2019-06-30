@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>microservice-shardingjdbc-masterslave</module>
+        <module>microservice-shardingjdbc-sharding-databases</module>
     </modules>
 
     <dependencies>
