@@ -67,6 +67,7 @@
         <module>microservice-shardingjdbc</module>
         <module>microservice-log</module>
         <module>microservice-transactional</module>
+        <module>microservice-crawler</module>
     </modules>
     <profiles>
         <profile>
