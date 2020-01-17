@@ -1,6 +1,5 @@
 package com.github.web.demo.controller;
 
-import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,7 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("redis")
 public class RedisTestController {
 
-    @SentinelResource("test")
     @GetMapping("test")
     public String set(String key, String value) {
         return "ok";
