@@ -20,7 +20,7 @@
         <spring-boot.version>2.1.7.RELEASE</spring-boot.version>
         <spring-boot-maven-plugin.version>${spring-boot.version}</spring-boot-maven-plugin.version>
         <platform-bom.version>Cairo-SR7</platform-bom.version>
-        <apache.dubbo.version>2.7.1</apache.dubbo.version>
+        <apache.dubbo.version>2.7.15</apache.dubbo.version>
         <dubbo-spring-boot-starter.version>${apache.dubbo.version}</dubbo-spring-boot-starter.version>
         <kryo.version>4.0.2</kryo.version>
         <kryo-serializers.version>0.45</kryo-serializers.version>
